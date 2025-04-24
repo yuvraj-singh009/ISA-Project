@@ -1,0 +1,137 @@
+/* Space Events Calendar Styles */
+.events-calendar {
+    margin: 2rem 0;
+   
+  }
+  
+  .events-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .time-range-toggle {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .time-range-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #1e2538;
+    color: #adb5bd;
+    cursor:pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .time-range-btn.active {
+    background-color: #3a86ff;
+    color: #f8f9fa;
+  }
+  
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+  
+  .event-card {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+                0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .event-card.mission {
+    background-color: #3a86ff;
+  }
+  
+  .event-card.astronomical {
+    background-color: #8338ec;
+  }
+  
+  .event-content {
+    padding: 1.5rem;
+  }
+  
+  .event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .event-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .event-importance {
+    font-size: 1.25rem;
+  }
+  
+  .event-description {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+  }
+  
+  .event-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+  }
+  
+  .event-date {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+  }
+  
+  .event-type {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .loading-spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+  
+  .loading-spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-top-color: #3a86ff;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .error-message {
+    color: #ff006e;
+    padding: 1rem;
+    background-color: rgba(255, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .no-events-message {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+  }
